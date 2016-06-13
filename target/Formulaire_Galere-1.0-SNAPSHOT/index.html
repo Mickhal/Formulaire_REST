@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html ng-app='root'>
+<head>
+	<title>Page d'accueil</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="js/shared/angular.js"></script>
+	<script type="text/javascript" src="js/shared/angular-route.js"></script>
+	<script type="text/javascript" src="js/shared/angular-resource.js"></script>
+	<script type="text/javascript" src="/js/shared/app.js"></script>
+	<script type="text/javascript" src="js/shared/routes.js"></script>
+	<!--<script type="text/javascript" src="js/shared/restangular.js"></script>-->
+	<script src="js/shared/lodash.js"></script>
+	<script>
+		_.contains = _.includes;
+	</script>
+	<!--<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/restangular.js"></script>-->
+	<script src="js/shared/restangular.js"></script>
+	<script type="text/javascript" src="js/controllers/controllers.js"></script>
+	<script type="text/javascript" src="js/directives/directives.js"></script>
+	<script type="text/javascript" src="js/services/services.js"></script>
+
+
+
+
+</head>
+
+
+<header> 
+	<h3 id="titreHead">Skwarel, la solution digitale <img id="logo" src="images/logo.png">
+	</h3>
+</header>	
+
+<body>
+	<nav>
+		<a href="#/page1">Page1</a>
+		<a href="#/page2">Page2</a>
+		<a href="#/page3">Page3</a>
+	</nav>
+	<br>
+	<div ng-view></div>
+
+</body>
+
+<footer> <center><h3 id="titreFooter" >"Les fiduciaires, nous en faisons notre affaire"</h3></center> </footer>
+
+</html>

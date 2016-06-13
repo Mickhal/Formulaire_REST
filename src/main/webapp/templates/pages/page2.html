@@ -1,0 +1,55 @@
+<div ng-controller="companyCtrl">
+	<form ng-submit="submitCompany()">
+
+	<fieldset>
+		<legend>Informations sur la société: </legend>
+		<label class="lb" >Nom complet de la société: </label> <input ng-model="nomSociete" class="txtField" type="text" placeholder="Saisissez le nom de la société" required/>
+		<br/>
+		<br/>
+
+		<label  name="noEntreprise" class="lb">Numéro de l'entreprise: </label> <input ng-model="numeroSociete" class="txtField" type="text" placeholder="XXXX.XXX.XXX"  pattern="[0-9][0-9][0-9][0-9]+.+[0-9][0-9][0-9]+.+[0-9][0-9][0-9]" required/>
+
+	<!-- 				<div ng-messages="!formSkwarel.noEntreprise.$error" >
+			<ng-message when="pattern">Veuillez saisir un numéro valide</ng-messages>
+
+		</div> -->
+
+
+
+		<br/>
+		<br/>
+		<label>Nombre d'employés: </label> <input ng-model="nbEmploye" type="number" min="1" max="300" required/>
+		<br/>
+		<br/>
+		<hr/>
+		<label>E-mail de la société: </label> <input ng-model="emailSociete" type="email" placeholder="@mail" required/>
+		<br/>
+		<br/>
+		<label>Adressse de la société: </label>
+		<select ng-model="localisationSociete" required>
+			<option value="30 C Cours Saint Michel">30 C Cours Saint-Michel</option>
+			<option value="40 C Cours Saint Michel">40 C Cours Saint-Michel</option>
+			<option value="50 C Cours Saint Michel">50 C Cours Saint-Michel</option>
+		</select>
+
+	</fieldset>
+	<input class="validation" type="submit" value="Envoyer"> <input class="validation" type="reset" value="Effacer"/>
+
+	</form>
+
+	<div ng-model="ok" ng-show="ok">
+	<h3 style="color: green">Confirmation d'enregistrement d'une nouvelle entreprise:</h3>
+
+	<table style="width:100%" >
+		<tr>
+			<td ng-model="okNom">Entreprise: {{okNom}} </td>
+			<td ng-model="okNum">Numéro: {{okNum}} </td>
+			<td ng-model="okNb">Nombre d'employés: {{okNb}} </td>
+			<td ng-model="okMail">Contact: {{okMail}} </td>
+			<td ng-model="okLoc">Localisation: {{okLoc}} </td>
+		</tr>
+	</table>
+	</div>
+	<a href="/companyCtrl/getListCompanies">Consulter la liste des sociétés</a>
+
+</div>

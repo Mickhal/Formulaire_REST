@@ -1,0 +1,21 @@
+#logo {display: inline; width: 150px; float: right}
+#entete{font-family: serif; font-style: italic}
+header {margin-bottom: 50px; background-color: lightblue; height: 100px;}
+fieldset {border: 2px solid lightblue; margin-bottom: 10px;}
+legend {background-color: lightgrey}
+label {display: block; float: left; width: 150px}
+.validation {background-color: lightblue}
+.logoClient {width: 80px;}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {padding: 15px}
+
+#descriptionSkwarel {background-color: grey; font-style: italic}
+#imgFin {width: 300px}
+
+#titreHead {color: white; font-style: italic; font-weight: bold;}
+#titreFooter {color: white; font-style: italic; font-weight: bold;}
+footer {background-color: lightblue; height: 70px;}
+
